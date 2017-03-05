@@ -6,6 +6,9 @@ module.exports = {
         
     },
     watch: true,
+    watchOptions: {
+        aggregateTimeout: 100
+    },
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
