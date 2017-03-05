@@ -124,7 +124,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var ReactDOM = __webpack_require__(2);
 var Hello_1 = __webpack_require__(1);
-ReactDOM.render(React.createElement(Hello_1.Hello, { programmer1: "Andrey", programmer2: "Alexandr" }), document.getElementById("example"));
+ReactDOM.render(React.createElement("div", null,
+    React.createElement(Hello_1.Hello, { programmer1: "Pasha", programmer2: "Vadim" }),
+    React.createElement(Hello_1.Hello, { programmer1: "Andrey", programmer2: "Alexandr" })), document.getElementById("example"));
 
 
 /***/ })

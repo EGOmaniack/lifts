@@ -5,7 +5,7 @@ module.exports = {
         path: __dirname + "/dist"
         
     },
-
+    watch: true,
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
