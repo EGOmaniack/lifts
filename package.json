@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/EGOmaniack/lifts.git"
   },
+  "keywords": [
+    "css-modules",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,6 +27,7 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "@types/node": "^7.0.5",
     "awesome-typescript-loader": "^3.0.8",
     "source-map-loader": "^0.1.6",
     "typescript": "^2.2.1"
