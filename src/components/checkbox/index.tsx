@@ -7,16 +7,11 @@ import styled from 'styled-components';
 const Outer = styled.div`
    width: fit-content;
 
-   >label {
-       color: green;
+   >.checklabel{
+       color:green;
    }
+   
 `
-
-const Check = styled.input`
-   color: green;
-   background: black;
-`
-
 
 export class Checkbox extends React.Component<any, any> {
     constructor(props: any){
@@ -25,7 +20,7 @@ export class Checkbox extends React.Component<any, any> {
     render() {
         return <Outer>
                     <input id="check1" type="checkbox" className="checkbox"/>
-                    <label htmlFor="check1" >{this.props.name}</label>
+                    <label className="checklabel" htmlFor="check1" >{this.props.name}</label>
                 </Outer>;
     }
 }
