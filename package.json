@@ -4,7 +4,6 @@
   "description": "Lift module from media_pult prjext",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --config webpack.config.js"
   },
   "repository": {
@@ -24,10 +23,9 @@
   "dependencies": {
     "@types/react": "^15.0.14",
     "@types/react-dom": "^0.14.23",
-    "css-loader": "^0.26.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "style-loader": "^0.13.2"
+    "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
