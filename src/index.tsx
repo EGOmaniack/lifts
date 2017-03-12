@@ -8,7 +8,7 @@ ReactDOM.render(
     <div>
         <Checkbox name="checkbox text"/>
         <Hello programmer1="Pasha" programmer2="Vadim"/>
-        <Hello programmer1="Andrey" programmer2="Alexandr" />
+        <Hello programmer1="Andrey" programmer2="Alexandr" />      
     </div>,
     document.getElementById("example")
 );
