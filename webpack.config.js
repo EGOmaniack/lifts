@@ -1,30 +1,14 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require("path");
 module.exports = {
     entry: "./src/index.tsx",
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: __dirname + "/dist"
         
     },
-    plugins:[
-        new HtmlWebpackPlugin({
-            title: "mediaPult",
-            minify:{
-                collapseWhitespace: true
-            },
-            template: './src/index.html',
-            hash:true
-        })
-    ],
-    devServer:{
-        contentBase: path.join(__dirname,"dist"),
-        compress: true,
-        stats: "errors-only",
-        port: 9000,
-        open: true
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 100
     },
-  
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
@@ -41,5 +25,12 @@ module.exports = {
    
     },
 
-   
+    // When importing a module whose path matches one of the following, just
+    // assume a corresponding global variable exists and use that instead.
+    // This is important because it allows us to avoid bundling all of our
+    // dependencies, which allows browsers to cache those libraries between builds.
+    externals: {
+        "react": "React",
+        "react-dom": "ReactDOM"
+    },
 };

@@ -4,10 +4,7 @@
   "description": "Lift module from media_pult prjext",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "start": "webpack --config webpack.config.js",
-    "build": "npm run clean && webpack",
-    "clean": "rimraf ./dist/*"
+    "start": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -33,11 +30,7 @@
   "devDependencies": {
     "@types/node": "^7.0.5",
     "awesome-typescript-loader": "^3.0.8",
-    "html-webpack-plugin": "^2.28.0",
-    "rimraf": "^2.6.1",
     "source-map-loader": "^0.1.6",
-    "typescript": "^2.2.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "typescript": "^2.2.1"
   }
 }
