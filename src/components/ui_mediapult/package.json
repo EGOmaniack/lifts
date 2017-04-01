@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui_mediapult@^1.0.3",
+        "scope": null,
+        "escapedName": "ui_mediapult",
+        "name": "ui_mediapult",
+        "rawSpec": "^1.0.3",
+        "spec": ">=1.0.3 <2.0.0",
+        "type": "range"
+      },
+      "C:\\1\\lifts"
+    ]
+  ],
+  "_from": "ui_mediapult@>=1.0.3 <2.0.0",
+  "_id": "ui_mediapult@1.0.3",
+  "_inCache": true,
+  "_location": "/ui_mediapult",
+  "_nodeVersion": "7.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ui_mediapult-1.0.3.tgz_1490520036689_0.06480701453983784"
+  },
+  "_npmUser": {
+    "name": "mediapult",
+    "email": "khabtech@mail.ru"
+  },
+  "_npmVersion": "4.4.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui_mediapult@^1.0.3",
+    "scope": null,
+    "escapedName": "ui_mediapult",
+    "name": "ui_mediapult",
+    "rawSpec": "^1.0.3",
+    "spec": ">=1.0.3 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ui_mediapult/-/ui_mediapult-1.0.3.tgz",
+  "_shasum": "15ad835b109d5e9a41ffd8c935ae2d7fd050273a",
+  "_shrinkwrap": null,
+  "_spec": "ui_mediapult@^1.0.3",
+  "_where": "C:\\1\\lifts",
+  "author": "",
+  "dependencies": {
+    "@types/react": "^15.0.14",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.4"
+  },
+  "description": "ui elements for mediapult project",
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "awesome-typescript-loader": "^3.0.8",
+    "source-map-loader": "^0.1.6",
+    "styled-components": "^1.4.4",
+    "typescript": "^2.2.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "15ad835b109d5e9a41ffd8c935ae2d7fd050273a",
+    "tarball": "https://registry.npmjs.org/ui_mediapult/-/ui_mediapult-1.0.3.tgz"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "mediapult",
+      "email": "khabtech@mail.ru"
+    }
+  ],
+  "name": "ui_mediapult",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "version": "1.0.3"
+}
