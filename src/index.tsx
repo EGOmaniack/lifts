@@ -4,7 +4,7 @@ import * as ReactDOM from "react-dom";
 import { Hello } from "./components/Hello";
 import {Checkboxq} from "./components/checkboxq";
 import {Checkbox, Newcheckbox} from "ui_mediapult";
-
+//test comment
 ReactDOM.render(
     <div>
         <Checkboxq name="checkbox first"/>
