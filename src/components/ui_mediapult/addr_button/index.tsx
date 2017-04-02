@@ -3,6 +3,8 @@ import * as DOM from 'react-dom';
 import styled from 'styled-components';
 //import { Row, Col } from 'react-bootstrap';
 //import { Button } from 'react-bootstrap';
+const activeColor = '#2ea2f8';
+const notActiveColor = '#ced0da';
 
 const Outer = styled.div`
    width: fit-content;
@@ -22,13 +24,12 @@ const Icon = styled.div`
     display: inline-block;
     height: 11px;
     width: 8px;
-    background: palevioletred url(img/pointer_inv.png) ;
 `
 const BtnBody = styled.div`
+    padding-right: 12px;
     line-height: 36px;
     height: 36px;
-    width: 100px;
-    border: 1px solid #2ea2f8;
+    border: 1px solid ${ this.props.active == true ? activeColor : notActiveColor };
     border-radius: 3px;
     color: #2ea2f8;
 `
@@ -41,7 +42,7 @@ export class Addr_button extends React.Component<any, any> {
         return <Outer>
                     <BtnBody>
                         <Content>
-                        <Icon></Icon>
+                        <Icon><img src="pointer_inv.png"></img></Icon>
                         <Text>{this.props.value}</Text>
                         </Content>
                     </BtnBody>
