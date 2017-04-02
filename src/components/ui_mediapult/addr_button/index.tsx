@@ -29,9 +29,12 @@ const BtnBody = styled.div`
     padding-right: 12px;
     line-height: 36px;
     height: 36px;
-    border: 1px solid ${ this.props.active == true ? activeColor : notActiveColor };
+    border: 1px solid ${notActiveColor};
+    color: ${notActiveColor};
+    ${ props => props.active && "border: 1px solid" + activeColor}
+    ${ props => props.active && "color: " + activeColor }
     border-radius: 3px;
-    color: #2ea2f8;
+    
 `
 
 export class Addr_button extends React.Component<any, any> {
@@ -40,7 +43,7 @@ export class Addr_button extends React.Component<any, any> {
     }
     render() {
         return <Outer>
-                    <BtnBody>
+                    <BtnBody active={this.props.active}>
                         <Content>
                         <Icon><img src="pointer_inv.png"></img></Icon>
                         <Text>{this.props.value}</Text>
