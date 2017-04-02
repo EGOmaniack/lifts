@@ -13,14 +13,16 @@ const Content = styled.div`
     vertical-align: middle;
 `
 const Text = styled.div`
+    margin-left: 15px;
     line-height: 36px;
-    float: left;
+    display: inline-block;
 `
 const Icon = styled.div`
-    float: left;
+    margin-left: 10px;
+    display: inline-block;
     height: 11px;
     width: 8px;
-    background: palevioletred url(components/ui_mediapult/addr_button/img/pointer_inv.png) ;
+    background: palevioletred url(img/pointer_inv.png) ;
 `
 const BtnBody = styled.div`
     line-height: 36px;
@@ -28,7 +30,7 @@ const BtnBody = styled.div`
     width: 100px;
     border: 1px solid #2ea2f8;
     border-radius: 3px;
-    color: green;
+    color: #2ea2f8;
 `
 
 export class Addr_button extends React.Component<any, any> {
