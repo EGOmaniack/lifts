@@ -4,7 +4,10 @@
   "description": "Lift module from media_pult prjext",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "dev": "webpack-dev-server",
+    "start": "webpack --config webpack.config.js",
+    "build": "npm run clean && webpack",
+    "clean": "rimraf ./dist/*"
   },
   "repository": {
     "type": "git",
@@ -24,13 +27,21 @@
     "@types/react": "^15.0.14",
     "@types/react-dom": "^0.14.23",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-bootstrap-typescript": "0.0.8",
     "react-dom": "^15.4.2",
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
     "awesome-typescript-loader": "^3.0.8",
+    "html-webpack-plugin": "^2.28.0",
+    "react-bootstrap": "^0.30.8",
+    "rimraf": "^2.6.1",
     "source-map-loader": "^0.1.6",
-    "typescript": "^2.2.1"
+    "typescript": "^2.2.1",
+    "ui_mediapult": "^1.0.3",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   }
 }
