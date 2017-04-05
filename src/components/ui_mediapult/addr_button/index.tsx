@@ -5,6 +5,7 @@ import styled from 'styled-components';
 //import { Button } from 'react-bootstrap';
 const activeColor = '#2ea2f8';
 const notActiveColor = '#ced0da';
+const orangeColor = 'ff7800';
 
 const Outer = styled.div`
    width: fit-content;
@@ -41,14 +42,27 @@ export class Addr_button extends React.Component<any, any> {
     constructor(props: any){
         super(props);
     }
-    render() {
-        return <Outer>
-                    <BtnBody active={this.props.active}>
-                        <Content>
-                        <Icon><img src="pointer_inv.png"></img></Icon>
-                        <Text>{this.props.value}</Text>
-                        </Content>
-                    </BtnBody>
-                </Outer>;
-    }
+    
+        render() {
+        if(this.props.type == "address"){
+            return <Outer>
+                        <BtnBody active={this.props.active}>
+                            <Content>
+                            <Icon><img src="pointer_inv.png"></img></Icon>
+                            <Text>{this.props.value}</Text>
+                            </Content>
+                        </BtnBody>
+                    </Outer>;
+        } else if(this.props.type == "inbucket"){
+            return <Outer>
+                        <BtnBody active={this.props.active}>
+                            <Content>
+                            <Icon><img src="pointer_inv.png"></img></Icon>
+                            <Text>{this.props.value}</Text>
+                            </Content>
+                        </BtnBody>
+                    </Outer>;
+        }
+        
+    } 
 }
