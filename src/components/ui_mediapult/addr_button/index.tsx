@@ -5,7 +5,7 @@ import styled from 'styled-components';
 //import { Button } from 'react-bootstrap';
 const activeColor = '#2ea2f8';
 const notActiveColor = '#ced0da';
-const orangeColor = 'ff7800';
+const orangeColor = '#ff7800';
 
 const Outer = styled.div`
    width: fit-content;
@@ -32,10 +32,29 @@ const BtnBody = styled.div`
     height: 36px;
     border: 1px solid ${notActiveColor};
     color: ${notActiveColor};
-    ${ props => props.active && "border: 1px solid" + activeColor}
+    ${ props => props.active && "border: 1px solid " + activeColor}
     ${ props => props.active && "color: " + activeColor }
     border-radius: 3px;
     
+`
+const OtherBtnBody = styled.div`
+padding-right: 12px;
+    line-height: 36px;
+    height: 36px;
+    background-color: ${orangeColor};
+    color: white;
+    ${ props => props.selected && " border: 1px solid " + orangeColor + ";"}
+    ${ props => props.selected && " background-color: none;"}
+    ${ props => props.selected && " color: " + orangeColor + ";" }
+    border-radius: 3px;
+`
+const Plus = styled.div`
+
+    > span {
+        width: 5px;
+        height: 2px;
+        background: white;
+    }
 `
 
 export class Addr_button extends React.Component<any, any> {
@@ -55,12 +74,15 @@ export class Addr_button extends React.Component<any, any> {
                     </Outer>;
         } else if(this.props.type == "inbucket"){
             return <Outer>
-                        <BtnBody active={this.props.active}>
+                        <OtherBtnBody selected={this.props.selected}>
                             <Content>
-                            <Icon><img src="pointer_inv.png"></img></Icon>
+                            <Plus>
+                                <span></span>
+                                <span></span>
+                            </Plus>
                             <Text>{this.props.value}</Text>
                             </Content>
-                        </BtnBody>
+                        </OtherBtnBody>
                     </Outer>;
         }
         
