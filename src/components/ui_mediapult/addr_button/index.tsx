@@ -1,15 +1,12 @@
 import * as React from 'react';
 import * as DOM from 'react-dom';
 import styled from 'styled-components';
-//import { Row, Col } from 'react-bootstrap';
-//import { Button } from 'react-bootstrap';
-const activeColor = '#2ea2f8';
-const notActiveColor = '#ced0da';
+const ActiveColor = '#2ea2f8';
+const DisableColor = '#ced0da';
 
+const image = require('../addr_button/img/pointer_inv.png');
 
-const Outer = styled.div`
-   width: fit-content;
-`
+interface DivProps { active?: boolean; }
 
 const Content = styled.div`
     line-height: 36px;
@@ -20,34 +17,32 @@ const Text = styled.div`
     line-height: 36px;
     display: inline-block;
 `
+
 const Icon = styled.div`
     margin-left: 10px;
     display: inline-block;
     height: 11px;
     width: 8px;
+    background: url(${image}) center center;
+    background-color: ${(props:DivProps) => props.active ? ActiveColor : DisableColor }; 
 `
-// добавим немного магии
-interface DivProps { active?: boolean; }
-const Btn:React.StatelessComponent<DivProps> = ({children, ...props}) => <div {...props}>{children}</div>
-// хоп и все заработало)))
-const BtnBody = styled(Btn)`
+
+const BtnBody = styled.div`
+    width: fit-content;
+    margin-top: 10px;
     padding-right: 12px;
     line-height: 36px;
     height: 36px;
-    border: 1px solid ${(props) => props.active ? activeColor : notActiveColor };
-    color: ${(props) => props.active ? activeColor : notActiveColor };   
+    border: 1px solid ${(props:DivProps) => props.active ? ActiveColor : DisableColor };
+    color: ${(props:DivProps) => props.active ? ActiveColor : DisableColor };   
     border-radius: 3px;    
 `
 
-//упростил, через классы избыточно много кода
 export const Addr_button = (props:any)=>{
-   return <Outer>
-                    <BtnBody {...props}>
+   return  <BtnBody {...props}>
                         <Content>
-                        <Icon><img src="pointer_inv.png"></img></Icon>
+                        <Icon {...props}></Icon>
                         <Text>{props.value}</Text>
                         </Content>
-                    </BtnBody>
-                </Outer>;
+                    </BtnBody>;
 }
-

@@ -14,7 +14,8 @@ ReactDOM.render(
         <Newcheckbox name="checkbox tree"/>
         <Hello programmer1="Pasha" programmer2="Vadim"/>
         <Hello programmer1="Andrey" programmer2="Alexandr" />
-        <Addr_button value={txt.addr} active/>      
+        <Addr_button value={txt.addr} active/>        
+        <Addr_button value={txt.addr} />     
     </div>,
     document.getElementById("example")
 );
