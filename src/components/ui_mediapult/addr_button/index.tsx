@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ActiveColor = '#2ea2f8';
 const DisableColor = '#ced0da';
 
-const image = require('../addr_button/img/pointer_inv.png');
+const image = require('../addr_button/img/pointer.svg');
 
 interface DivProps { active?: boolean; }
 
@@ -24,7 +24,7 @@ const Icon = styled.div`
     height: 11px;
     width: 8px;
     background: url(${image}) center center;
-    background-color: ${(props:DivProps) => props.active ? ActiveColor : DisableColor }; 
+    background-color: ${(props:DivProps) => props.active ? ActiveColor : DisableColor };
 `
 
 const BtnBody = styled.div`
