@@ -1,22 +1,20 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 //import {Checkbox} from "./components/checkbox";
-import { Hello } from "./components/Hello";
-import {Checkbox, Newcheckbox, Addr_button} from "./components/ui_mediapult";
-import * as txt from './constants/liftPackages';
+import Hello from "./components/Hello";
+import { Provider } from 'react-redux';
+import {createStore} from 'redux';
 //test comment
 
-
+const reducer = (state:any) => state;
+const initialState = {
+    views: 20
+};
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
-    <div>
-        <Checkbox name="checkbox second2"/>
-        <Newcheckbox name="checkbox tree"/>
-        <Hello programmer1="Pasha" programmer2="Vadim"/>
-        <Hello programmer1="Andrey" programmer2="Alexandr" />
-        <Addr_button type = "address" value={txt.addr} active />
-        <Addr_button type = "inbucket" value={txt.inbucket} selected />
-        <Addr_button type = "inbucket" value={txt.inbucket} />      
-    </div>,
+    <Provider store={store}>
+              
+    </Provider>,
     document.getElementById("example")
 );
